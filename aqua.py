@@ -16,7 +16,7 @@ import mysql.connector
 
 
 # read csv from a github repo
-data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\Water_pond_tanks_2021 -Second Copy.csv")
+data = pd.read_csv("https://github.com/ant2340/Aquaprobe/blob/main/Water_pond_tanks_2021%20-Second%20Copy.csv")
 
 
 st.set_page_config(
