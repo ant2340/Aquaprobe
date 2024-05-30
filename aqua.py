@@ -13,7 +13,7 @@ import warnings
 import matplotlib.pyplot as plt
 warnings.filterwarnings('ignore')
 import mysql.connector
-from ._version import __version__
+
 
 # read csv from a github repo
 data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\Water_pond_tanks_2021 -Second Copy.csv")
