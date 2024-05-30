@@ -16,7 +16,7 @@ import mysql.connector
 
 
 # read csv from a github repo
-# data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\CR.csv")
+data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\Water_pond_tanks_2021 -Second Copy.csv")
 
 
 st.set_page_config(
@@ -34,7 +34,7 @@ connection=mysql.connector.connect(host='localhost',
 user='root',password='',database='test')
 print('connected')
 cursor=connection.cursor()
-cursor.execute("Select * from aquaprobe")
+cursor.execute("Select * from aquaprobe02")
 dt=cursor.fetchall()
 print(cursor.column_names)
 df=pd.DataFrame(dt,columns=cursor.column_names)
@@ -42,11 +42,11 @@ df=pd.DataFrame(dt,columns=cursor.column_names)
 
 
 #label encoding for categorial values
-from sklearn.preprocessing import LabelEncoder
-le=LabelEncoder()
-data['MONTH']= le.fit_transform(data['MONTH'])
-n=9
-data=data.iloc[:n]
+#from sklearn.preprocessing import LabelEncoder
+#le=LabelEncoder()
+#data['MONTH']= le.fit_transform(data['MONTH'])
+#n=9
+#data=data.iloc[:n]
 # data.drop(columns=['Unnamed: 3'], inplace=True)
 # data.drop(columns=['Unnamed: 4'], inplace=True)
 #training the model
@@ -64,10 +64,10 @@ st.header("Know the Fecal Coliform level in water")
 #     print(row)
 
 
-val=st.number_input("Enter the BOD level in water", 0.0, 8.0, step=0.25)
-val=np.array(val).reshape(-1,1)
-pred=lr.predict(val)[0]
-st.success(f"The predicted value of FC is {round(pred)}")
+#val=st.number_input("Enter the BOD level in water", 0.0, 8.0, step=0.25)
+#val=np.array(val).reshape(-1,1)
+#pred=lr.predict(val)[0]
+#st.success(f"The predicted value of FC is {round(pred)}")
 
 # creating a single-element container.
 placeholder = st.empty()
