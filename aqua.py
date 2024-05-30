@@ -16,7 +16,7 @@ import mysql.connector
 
 
 # read csv from a github repo
-data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\CR.csv")
+# data = pd.read_csv(r"C:\Users\karan\OneDrive\Desktop\major_project03_files\CR.csv")
 
 
 st.set_page_config(
