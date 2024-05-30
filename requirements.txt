@@ -9,3 +9,5 @@ streamlit
 matplotlib
 mysql.connector
 mysql-connector-python
+mysql
+
