@@ -36,7 +36,9 @@ print('connected')
 cursor=connection.cursor()
 cursor.execute("Select * from aquaprobe02")
 dt=cursor.fetchall()
-df=pd.DataFrame(dt,columns=cursor.column_names)
+column_names = [desc[0] for desc in cursor.description]
+print(column_names)
+df=pd.DataFrame(dt,columns=column_names)
 #label encoding for categorial values
 #from sklearn.preprocessing import LabelEncoder
 #le=LabelEncoder()
